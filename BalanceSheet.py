@@ -117,6 +117,7 @@ def main() :
 					else:
 							first_type(link)
 			except:
+	
 					print(numer_of_error)
 					numer_of_error+=1
 ##
