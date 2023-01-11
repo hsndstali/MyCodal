@@ -10,6 +10,16 @@ import time
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
+# Path of Webdriver for example:
+path = r"C:\Program Files (x86)\chromedriver.exe"
+from selenium.webdriver.chrome.options import Options
+# to get selenium faster
+chrome_options = Options()
+chrome_options.add_argument("--disable-extensions")
+chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--headless")
+
+
 
 
 def main() :
@@ -39,7 +49,7 @@ def main() :
     df = pd.DataFrame(data=data, columns=list_header).T
     return df
   ##
-  driver = webdriver.Chrome()
+  driver = webdriver.Chrome(path, options=chrome_options)
   ##
   # Load the announcements for each company
   driver.get('https://my.codal.ir/fa/statements/?company_id=&my_basket=&statement_type=146&period=12&financial_years=&company_type=0&status=1&tracing_number=&publisher_state=&title=&from_date=&to_date=&parent_or_subset=1&consolidated_or_not=&per_page=100#scroll_to_results')
