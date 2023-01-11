@@ -16,6 +16,7 @@ driver = webdriver.Chrome(path, options=chrome_options)
 
 
 ##
+driver.get('https://my.codal.ir/fa/statements/?company_id=&my_basket=&statement_type=146&period=12&financial_years=&company_type=0&status=1&tracing_number=&publisher_state=&title=&from_date=&to_date=&parent_or_subset=1&consolidated_or_not=&per_page=100#scroll_to_results')
 
 for i in range(100):
     reports = (
